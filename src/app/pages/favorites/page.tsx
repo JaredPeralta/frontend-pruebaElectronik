@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 import axios from "axios";
 import { getToken, isAuthenticated } from "../../utils/auth";
 import unsplash from "../../utils/unsplash";
@@ -127,7 +128,14 @@ const Favorites = () => {
         {favorites.length > 0 ? (
           favorites.map((fav) => (
             <div key={fav.id} style={containerStyle}>
-              <img src={fav.urls.small} alt={fav.alt_description} style={imgStyle} />
+              <Image 
+                src={fav.urls.small} 
+                alt={fav.alt_description} 
+                width={400}
+                height={600}
+                style={imgStyle}
+              />
+
               <button style={buttonStyle} onClick={() => handleRemoveFavorite(fav.id)}>Eliminar</button> {/* Botón de eliminar */}
             </div>
           ))

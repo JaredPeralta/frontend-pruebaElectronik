@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { useAuth } from "../context/AuthContext";  // Importa el contexto de autenticación
+import Link from "next/link";
+import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const { isAuth, logout } = useAuth();  // Usamos el contexto aquí
+  const { isAuth, logout } = useAuth();
   const router = useRouter();
 
   const handleLogout = () => {
@@ -17,17 +18,27 @@ const Header = () => {
     <header style={styles.header}>
       <nav style={styles.nav}>
         <ul style={styles.navList}>
-          <li style={styles.navItem}><a href="/" style={styles.link}>Home</a></li>
-          <li style={styles.navItem}><a href="/pages/favorites" style={styles.link}>Favoritos</a></li>
-          <li style={styles.navItem}><a href="/pages/search" style={styles.link}>Buscar Imagen</a></li>
+          <li style={styles.navItem}>
+            <Link href="/" style={styles.link}>Home</Link>
+          </li>
+          <li style={styles.navItem}>
+            <Link href="/pages/favorites" style={styles.link}>Favoritos</Link>
+          </li>
+          <li style={styles.navItem}>
+            <Link href="/pages/search" style={styles.link}>Buscar Imagen</Link>
+          </li>
           {isAuth ? (
             <li style={styles.navItem}>
               <button onClick={handleLogout} style={styles.button}>Cerrar sesión</button>
             </li>
           ) : (
             <>
-              <li style={styles.navItem}><a href="/pages/auth/login" style={styles.link}>Iniciar sesión</a></li>
-              <li style={styles.navItem}><a href="/pages/auth/register" style={styles.link}>Registrarse</a></li>
+              <li style={styles.navItem}>
+                <Link href="/pages/auth/login" style={styles.link}>Iniciar sesión</Link>
+              </li>
+              <li style={styles.navItem}>
+                <Link href="/pages/auth/register" style={styles.link}>Registrarse</Link>
+              </li>
             </>
           )}
         </ul>
@@ -35,7 +46,6 @@ const Header = () => {
     </header>
   );
 };
-
 
 const styles = {
   header: {
@@ -73,5 +83,3 @@ const styles = {
 };
 
 export default Header;
-
-

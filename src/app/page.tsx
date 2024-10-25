@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 import InfiniteScroll from "../components/InfiniteScroll";
 import unsplash from "./utils/unsplash";
 import { addFavoriteToLocalStorage, removeFavoriteFromLocalStorage, isFavoriteInLocalStorage } from "./utils/storage"; 
@@ -120,7 +121,13 @@ const Home = () => {
       <div style={styles.grid}>
         {images.map((image, index) => (
           <div key={`${image.id}-${index}`} style={favorites.includes(image.id) ? styles.selectedCard : styles.card}>
-            <img src={image.urls.small} alt={image.alt_description} style={styles.image} />
+            <Image 
+              src={image.urls.small} 
+              alt={image.alt_description} 
+              width={400} 
+              height={600}
+              style={styles.image}
+            />
             <button onClick={() => handleToggleFavorite(image.id)} style={styles.button}>
               {favorites.includes(image.id) ? "Desmarcar" : "Marcar como favorito"}
             </button>
