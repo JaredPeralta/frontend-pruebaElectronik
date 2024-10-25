@@ -75,8 +75,9 @@ const Home = () => {
         return;
       }
 
-      const uniqueImages = Array.from(new Set(response.data.map(img => img.id)))
-        .map(id => response.data.find(img => img.id === id) as UnsplashImage);
+      const uniqueImages = Array.from(new Set(response.data.map((img: UnsplashImage) => img.id)))
+        .map(id => response.data.find((img: UnsplashImage) => img.id === id) as UnsplashImage);
+
 
       setImages((prevImages) => [...prevImages, ...uniqueImages]);
       setPage((prevPage) => prevPage + 1);
