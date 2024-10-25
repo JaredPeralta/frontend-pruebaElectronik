@@ -22,6 +22,7 @@ const Login = () => {
       login();  
       router.push("/pages/favorites"); 
     } catch (err) {
+      console.error("Error durante el login:", err);
       setError("Credenciales incorrectas. Inténtalo de nuevo.");
     }
   };

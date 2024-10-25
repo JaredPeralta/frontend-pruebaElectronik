@@ -17,6 +17,7 @@ const Register = () => {
       await axios.post(`${backendUrl}/api/auth/register`, { username, password });
       router.push("/pages/auth/login");
     } catch (err) {
+      console.error("Error durante el registro:", err);
       setError("Error al registrar. Inténtalo de nuevo.");
     }
   };
