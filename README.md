@@ -56,3 +56,9 @@ Crear un archivo .env en la raíz del proyecto con las siguientes variables:
    npm run dev
    ```
 3. Abre tu navegador en http://localhost:3000.
+
+## Ruta del cliente desplegado en Vercel
+
+```bash
+   https://frontend-prueba-electronik.vercel.app/
+   ```
