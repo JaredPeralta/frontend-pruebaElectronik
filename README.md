@@ -62,3 +62,21 @@ Crear un archivo .env en la raíz del proyecto con las siguientes variables:
 ```bash
    https://frontend-prueba-electronik.vercel.app/
    ```
+
+## Prueba funcional de los servicios desplegados.
+
+1. Registro y login usuario nuevo:
+
+https://github.com/user-attachments/assets/90e41ab6-a2e6-4d43-ba20-2322e8822ab1
+
+2. Guardado de dos imagenes usuario nuevo: 
+
+https://github.com/user-attachments/assets/6b6af056-2ee4-4509-804c-bba537819d14
+
+3. Salimos de la sesion, scroll infinito, favoritos no logeados y sicronizacion al iniciar sesion:
+
+https://github.com/user-attachments/assets/1bf9986c-f089-451b-953c-f3c8ad99ae18
+
+4 Busqueda de imagenes y almacenamineto en cache:
+
+https://github.com/user-attachments/assets/9e3e9721-a9aa-40a1-8fd1-f52f6877bdc9
