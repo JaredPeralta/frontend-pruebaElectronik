@@ -10,7 +10,7 @@ interface UnsplashImage {
 
 // Función para agregar una imagen a favoritos en LocalStorage
 export const addFavoriteToLocalStorage = (imageId: string) => {
-  let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
   if (!favorites.includes(imageId)) {
     favorites.push(imageId);
     localStorage.setItem("favorites", JSON.stringify(favorites));

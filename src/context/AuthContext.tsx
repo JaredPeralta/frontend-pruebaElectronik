@@ -1,10 +1,17 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { getToken, isAuthenticated, logout } from "../app/utils/auth";
+import { isAuthenticated, logout } from "../app/utils/auth";
 
-// Definir el contexto
-const AuthContext = createContext<any>(null);
+// Definir el tipo de contexto
+interface AuthContextType {
+  isAuth: boolean;
+  login: () => void;
+  logout: () => void;
+}
+
+// Crear el contexto
+const AuthContext = createContext<AuthContextType | null>(null);
 
 export const useAuth = () => useContext(AuthContext);
 
@@ -38,3 +45,4 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     </AuthContext.Provider>
   );
 };
+
