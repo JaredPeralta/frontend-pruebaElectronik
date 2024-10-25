@@ -6,10 +6,11 @@ Este proyecto es el frontend de una aplicación que permite a los usuarios explo
 
 ## Características
 
+- **Registro y autenticacion de usuarios:** Se permite el registro de los nuevos usuarios y tambien la autenticacion del usuario mediante JWT.
 - **Exploración de imágenes:** El usuario puede explorar imágenes mediante un scroll infinito.
 - **Marcado de favoritos:** Los usuarios pueden marcar o desmarcar imágenes como favoritas. Los favoritos se guardan en localStorage para usuarios no autenticados.
 - **Sincronización de favoritos:** Al iniciar sesión, los favoritos guardados en el localStorage se sincronizan con la base de datos.
-- **Autenticación de usuario:** Funcionalidad de inicio y cierre de sesión utilizando JWT.
+- **Caché de Resultados:** Funcionalidad de busqueda y almacenaje en Caché de Resultados.
 
 ## Tecnologías
 
