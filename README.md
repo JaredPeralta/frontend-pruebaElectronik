@@ -28,4 +28,22 @@ Este proyecto es el frontend de una aplicación que permite a los usuarios explo
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/frontend-imagenes-favoritas.git
+   git clone https://github.com/JaredPeralta/frontend-pruebaElectronik
+   ```
+2. Instalar las dependencias:
+   ```bash
+   npm install
+   ```
+
+## Variables de Entorno
+Crear un archivo .env en la raíz del proyecto con las siguientes variables:
+
+   ```bash
+   Se puede usar la ruta de local host o la ruta del back desplegado
+   NEXT_PUBLIC_BACKEND_URL=http://localhost:3001
+   NEXT_PUBLIC_BACKEND_URL=https://boiling-reaches-39655-8ef592acfacd.herokuapp.com
+
+   Credenciales de la api de unsplash
+   NEXT_PUBLIC_UNSPLASH_URL=https://api.unsplash.com
+   NEXT_PUBLIC_UNSPLASH_TOKEN= <token>
+   ```
